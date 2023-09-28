@@ -1,0 +1,31 @@
+body{
+    font-family: onest, sans-serif;
+    background-color:#6290FC ;
+    color:#fc0303;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    font-size: x-large;
+}
+h2{
+    font-size: medium ;
+}
+header{
+    text-align: center;
+}
+#hero, footer {
+    color:black;
+    border: 2px solid ;
+    background-color: rgb(252, 101, 6);
+    text-align:center;
+    padding:10px;
+}
+#hero img{
+    width: 300px;
+}
+#bio{
+    text-align: center;
+}
