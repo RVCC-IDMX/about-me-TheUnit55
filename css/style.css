@@ -5,13 +5,14 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
 }
 h1{
     font-size: x-large;
 }
 h2{
-    font-size: medium ;
+    font-size: xx-large ;
 }
 header{
     text-align: center;
@@ -27,5 +28,8 @@ header{
     width: 300px;
 }
 #bio{
-    text-align: center;
+    text-align:center;
+}
+#hobbies ul li:nth-child(even){
+    color:aquamarine;
 }
