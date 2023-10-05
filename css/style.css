@@ -1,53 +1,68 @@
-body{
+body {
     font-family: onest, sans-serif;
-    background-color:#6290FC ;
-    color:#ef610a;
+    background-color: #6290FC;
+    color: #ef610a;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
-    text-align:center;
-    text-shadow:2px 2px 4px rgba(0,0,0,1);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
-h1{
+
+h1 {
     font-size: x-large;
 }
-h2{
-    font-size: xx-large ;
+
+h2 {
+    font-size: xx-large;
 }
-header{
+
+header {
     text-align: center;
 }
-#hero, footer {
-    color:black;
-    border: 2px solid ;
+
+#hero,
+footer {
+    color: black;
+    border: 2px solid;
     background-color: rgb(252, 101, 6);
-    text-align:center;
-    padding:10px;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.75);
 }
 
 /* Hero Section*/
 
-#hero img{
+#hero img {
     width: 300px;
 }
 
 /* Bio Section*/
 
-#bio{
-    text-align:center;
+#bio {
+    text-align: center;
+    color:red;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
 /* Hobbies */
 
 #hobbies {
     margin-top: 20px;
-  }
-  .hobby-list {
+}
+
+.hobby-list {
     list-style: none;
     padding: 0;
-  }
-  .hobby-list li {
+}
+
+.hobby-list li {
     margin-bottom: 10px;
     font-size: 18px;
     color: #333;
@@ -55,43 +70,84 @@ header{
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    text-shadow:1px 1px 2px rgba(255, 132, 1, 0.3);
+    text-shadow: 1px 1px 2px rgba(255, 132, 1, 0.3);
     display: flex;
     align-items: center;
-  }
-  .hobby-list li:nth-child(even) {
+}
+
+.hobby-list li:nth-child(even) {
     color: aquamarine;
     background-color: #3498db;
-    color: white; 
-    text-shadow:1px 1px 2px rgb(255, 0, 0) ;
-  }
-  
-  /* Gallery*/
-/*centers the image*/
-  #gallery{
-    display:flex;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+/* Gallery */
+/*centers the image
+*flex to wrap onto the next line*/
+#gallery {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding:20px;
+    padding: 20px;
     border: 2px solid;
-  }
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+}
+
 /*Maintain the aspect ratio
 *Shadows
 *smoother hover effect */
-  #galley img{
-    max-width:100%;
-    height:auto;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+#galley img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out;
     cursor: pointers;
-  }
-/* hover effect to scale to 110% when hovered*/
-  #gallery img:hover{
-    transform: scale(1.1);
-  }
+}
 
-  #gallery figure{
-    text-align:center;
+/* hover effect to scale to 110% when hovered*/
+#gallery img:hover {
+    transform: scale(1.1);
+}
+
+#gallery figure {
+    text-align: center;
     margin: 0;
-  }
+}
+
+/* Literature*/
+#lit {
+    border: 2px solid black;
+    margin-bottom: 2rem;
+    color:red;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+}
+
+#lit div {
+    padding: 2rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    
+}
+
+#lit div p {
+    padding: 0.3rem 0;
+    clear: both;
+}
+
+#lit div p:nth-child(3n+1):first-letter {
+    font-size: 2rem;
+    color: red;
+    float: left;
+    margin-right: 6px;
+    font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    border:2px solid red;
+    padding:4px;
+    line-height:1;
+    text-align:center;
+    box-shadow:0 0 5px rgba(0,0,0,.5);
+}
