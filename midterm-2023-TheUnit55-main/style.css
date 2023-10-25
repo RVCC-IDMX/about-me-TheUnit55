@@ -10,7 +10,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    text-shadow: 2px 2px 5px #000;
+    text-shadow: 2px 2px 2px #000;
 }
 /* header 2 style */
 h2 {
@@ -35,7 +35,7 @@ ul li {
     border-radius: 5px;
     text-decoration: none;
     color: #ed8a73;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 /* Style for portfolio webpages */
