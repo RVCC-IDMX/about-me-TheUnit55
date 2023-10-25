@@ -17,6 +17,13 @@ h2 {
     color: #000;
     text-shadow: 2px 1px 2px #fff;
 }
+/* header 3 style */
+h3{
+    color:#000;
+    text-shadow:2px 1px 2px #fff;
+    text-align: center;
+    font-size:xx-large;
+}
 /* Main Section Styles */
 main {
     margin: 20px;
@@ -47,15 +54,41 @@ ul li a {
     text-decoration: none;
     color: #000;
 }
-/* image Gallery Style */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+/* gallery style */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,1);
 }
-/* Image Styles within the image gallery*/
-img {
+
+/*Maintain the aspect ratio
+*Shadows
+*smoother hover effect */
+#galley img {
     max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointers;
+}
+
+/* hover effect to scale to 110% when hovered*/
+#gallery img:hover {
+    transform: scale(1.1);
+}
+
+#gallery figure {
+    text-align: center;
+    margin:0;
+    
+}
+#gallery figcaption{
+    padding: 20px;
 }
 /* box shadow for images */
 .image-gallery img {
