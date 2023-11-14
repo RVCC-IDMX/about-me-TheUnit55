@@ -13,7 +13,8 @@ body, h1, table {
 /* Style for h1 element */
 h1 {
   text-align: center;
-  color: #333;
+  color: #000000;
+  text-shadow:2px 2px 2px #fff;
   font-size: 2em;
   margin-bottom: 0.5em;
 }
@@ -53,7 +54,20 @@ td:last-child {
   font-style: italic;
   color: #555;
 }
-/* Responsive table */
+ /* Set the background image and make sure it covers the entire page */
+body {
+  background-image: url('fragment.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+.table-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*responsive*/
 @media screen and (max-width: 600px) {
   thead {
     display: none;
