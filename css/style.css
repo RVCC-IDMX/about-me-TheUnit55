@@ -252,3 +252,9 @@ Maintains right padding for diffrent sizes*/
         max-height: 1000px;
     }
 }
+
+/* contact Form*/
+
+#formElements{
+    display:grid;
+}
