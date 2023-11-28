@@ -5,12 +5,7 @@ body {
     color: #ef610a;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -29,8 +24,7 @@ header {
     text-align: center;
 }
 
-#hero,
-footer {
+#hero, footer {
     color: black;
     border: 2px solid;
     background-color: rgb(252, 101, 6);
@@ -39,25 +33,22 @@ footer {
     text-shadow: 2px 2px 4px rgba(0,0,0,.75);
 }
 
-/* Hero Section*/
-
+/* Hero Section */
 #hero img {
-    width: 300px;
+    width: 300px; /* Fixed width for larger screens */
 }
 
-/* Bio Section*/
-
+/* Bio Section */
 #bio {
     text-align: center;
-    color:red;
+    color: red;
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
-/* Hobbies */
-
+/* Hobbies Section */
 #hobbies {
-    margin-top: 20px ;
-    display:flex;
+    margin-top: 20px;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -87,9 +78,7 @@ footer {
     text-shadow: 1px 1px 2px rgb(255, 0, 0);
 }
 
-/* Gallery */
-/*centers the image
-*flex to wrap onto the next line*/
+/* Gallery Section */
 #gallery {
     display: flex;
     flex-wrap: wrap;
@@ -101,9 +90,6 @@ footer {
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
-/*Maintain the aspect ratio
-*Shadows
-*smoother hover effect */
 #gallery img {
     max-width: 100%;
     height: auto;
@@ -111,26 +97,25 @@ footer {
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
 }
-
-/* hover effect to scale to 110% when hovered*/
+/* Hover effect to scale image */
 #gallery img:hover {
     transform: scale(1.1);
 }
 
 #gallery figure {
     text-align: center;
-    margin:0;
-    
+    margin: 0;
 }
-#gallery figcaption{
+
+#gallery figcaption {
     padding: 20px;
 }
 
-/* Literature*/
+/* Literature Section */
 #lit {
     border: 2px solid black;
     margin-bottom: 2rem;
-    color:red;
+    color: red;
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
@@ -138,7 +123,6 @@ footer {
     padding: 2rem;
     max-width: 40rem;
     margin: 0 auto;
-    
 }
 
 #lit div p {
@@ -152,80 +136,119 @@ footer {
     float: left;
     margin-right: 6px;
     font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
-    font-style:italic;
+    font-style: italic;
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
-    border:2px solid red;
-    padding:4px;
-    line-height:1;
-    text-align:center;
-    box-shadow:0 0 5px rgba(0,0,0,.5);
+    border: 2px solid red;
+    padding: 4px;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
 }
-/* tablet size */
-@media screen and (min-width: 60em){
 
-    figure{
-        display:grid;
+/* Responsive design for tablet size */
+@media screen and (min-width: 60em) {
+    figure {
+        display: grid;
         grid-template-columns: 2fr 1fr;
     }
-    figcaption{
+    figcaption {
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 2rem;
         margin-left: 1rem;
     }
-    figure img{
-        width: 100%
+    figure img {
+        width: 100%;
     }
-    #lit div{
+    #lit div {
         max-width: 100%;
         columns: 20rem;
     }
 }
 
-/* large screen size */
-
-@media screen and (min-width:100em){
-
-    #gallery{
-        display:grid;
+/* Responsive design for large screen size */
+@media screen and (min-width: 100em) {
+    #gallery {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    hr{
-        display:none;
+    hr {
+        display: none;
     }
 
-#gallery h2{
-    grid-column: 1/-1;
+    #gallery h2 {
+        grid-column: 1/-1;
+    }
+
+    figure {
+        display: block;
+    }
 }
 
-figure{
-    display:block;
-}
-}
-/* embedding 
-/* Container for the video and heading */
+/* Embedding Styles for Videos 
+Alignment implementations*/
 .video {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 500px; 
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 20px;
 }
 
-/* Style for the heading */
 .video h2 {
     padding-bottom: 10px;
     text-align: center;
 }
-
-/* Style for the embedded iframe */
+/* Adjust the width considering the padding 
+ Ensures the container spans the full height of .video */
+#myVideo {
+    width: calc(100% - 40px); 
+    height: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px; 
+}
+/* Responsive width and height
+Double height for larger screen and maintain aspect ratio */
 #myVideo iframe {
-    max-width: 100%;
-    max-height: 100%;
-} 
+    width: 100%; 
+    height: 100%;
+    max-height: 1000px; 
+    object-fit: contain;
+    margin: auto;
+}
 
+/* Additional Responsive Styles 
+Maintains right padding for diffrent sizes*/
+@media only screen and (max-width: 375px) {
+    .video {
+        height: auto; 
+    }
+
+    #myVideo iframe {
+        max-width: 95%;
+        max-height: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #myVideo iframe {
+        max-width: 95%; 
+        max-height: none; 
+    }
+}
+/* heights and widths for larger and medkium screens*/
+@media screen and (min-width: 1024px) {
+    .video {
+        height: 1000px; 
+    }
+    
+    #myVideo iframe {
+        max-width: 900px; 
+        max-height: 1000px;
+    }
+}
