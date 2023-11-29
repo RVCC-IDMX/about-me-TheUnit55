@@ -253,8 +253,98 @@ Maintains right padding for diffrent sizes*/
     }
 }
 
-/* contact Form*/
+/* contact Form
 
 #formElements{
     display:grid;
-}
+}*/
+
+/* General styles */
+/* Contact Section */
+section#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Use space-between to create space between contact info and form */
+    padding: 50px; /* Increase padding for larger space inside the section */
+    background: url('C:\Users\jimen\Documents\GitHub\about-me-TheUnit55\img\space.png') center no-repeat;
+    background-size: cover;
+    color: #fff; /* Make all text inside the section white */
+  }
+  
+  /* Contact Information */
+  .contact-info {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px; /* Add some margin between the info and the form */
+  }
+  
+  .contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increase spacing between contact details */
+  }
+  
+  .contact-info div i {
+    margin-right: 10px; /* Space out icons from text */
+  }
+  
+  /* Contact Form */
+  #contactForm {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Set a max-width to keep form from stretching too wide */
+  }
+  
+  #contactForm fieldset {
+    border: none; /* Remove border from fieldsets */
+    padding: 0; /* Remove padding from fieldsets */
+  }
+  
+  #contactForm legend {
+    color: #fff; /* White text for legends */
+    margin-bottom: 20px; /* Add space below the legend */
+  }
+  
+  #contactForm label {
+    display: block; /* Make labels block to take full width */
+  }
+  
+  #contactForm input[type="text"],
+  #contactForm input[type="email"],
+  #contactForm input[type="tel"],
+  #contactForm textarea,
+  #contactForm button {
+    width: 100%; /* Full width elements */
+    padding: 10px;
+    margin-bottom: 10px; /* Add space between form items */
+    border: 1px solid #fff; /* White border for input */
+    border-radius: 5px;
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text color */
+  }
+  
+  #contactForm button {
+    background-color: #008CBA;
+    border: none;
+  }
+  
+  #contactForm button:hover {
+    background-color: #005f73;
+  }
+  
+  /* Ensure the layout stacks on smaller screens */
+  @media (max-width: 900px) {
+    section#contact {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .contact-info, #contactForm {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 20px; /* Add space between stacked elements */
+    }
+  }
+  
