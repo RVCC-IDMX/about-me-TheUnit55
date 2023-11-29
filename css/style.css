@@ -1,11 +1,15 @@
-
 body {
     font-family: onest, sans-serif;
     background-color: #6290FC;
     color: #ef610a;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -24,25 +28,27 @@ header {
     text-align: center;
 }
 
-#hero, footer {
+#hero,
+footer {
     color: black;
     border: 2px solid;
     background-color: rgb(252, 101, 6);
     text-align: center;
     padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.75);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .75);
 }
 
 /* Hero Section */
 #hero img {
-    width: 300px; /* Fixed width for larger screens */
+    width: 300px;
+    /* Fixed width for larger screens */
 }
 
 /* Bio Section */
 #bio {
     text-align: center;
     color: red;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 /* Hobbies Section */
@@ -87,7 +93,7 @@ header {
     padding: 20px;
     border: 2px solid;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 #gallery img {
@@ -97,6 +103,7 @@ header {
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
 }
+
 /* Hover effect to scale image */
 #gallery img:hover {
     transform: scale(1.1);
@@ -116,7 +123,7 @@ header {
     border: 2px solid black;
     margin-bottom: 2rem;
     color: red;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 #lit div {
@@ -137,12 +144,12 @@ header {
     margin-right: 6px;
     font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     border: 2px solid red;
     padding: 4px;
     line-height: 1;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 /* Responsive design for tablet size */
@@ -151,6 +158,7 @@ header {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
+
     figcaption {
         display: flex;
         justify-content: center;
@@ -158,9 +166,11 @@ header {
         font-size: 2rem;
         margin-left: 1rem;
     }
+
     figure img {
         width: 100%;
     }
+
     #lit div {
         max-width: 100%;
         columns: 20rem;
@@ -193,7 +203,7 @@ Alignment implementations*/
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px; 
+    height: 500px;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -202,22 +212,24 @@ Alignment implementations*/
     padding-bottom: 10px;
     text-align: center;
 }
+
 /* Adjust the width considering the padding 
  Ensures the container spans the full height of .video */
 #myVideo {
-    width: calc(100% - 40px); 
-    height: 100%; 
+    width: calc(100% - 40px);
+    height: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    padding: 20px; 
+    padding: 20px;
 }
+
 /* Responsive width and height
 Double height for larger screen and maintain aspect ratio */
 #myVideo iframe {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    max-height: 1000px; 
+    max-height: 1000px;
     object-fit: contain;
     margin: auto;
 }
@@ -226,7 +238,7 @@ Double height for larger screen and maintain aspect ratio */
 Maintains right padding for diffrent sizes*/
 @media only screen and (max-width: 375px) {
     .video {
-        height: auto; 
+        height: auto;
     }
 
     #myVideo iframe {
@@ -237,114 +249,111 @@ Maintains right padding for diffrent sizes*/
 
 @media only screen and (max-width: 768px) {
     #myVideo iframe {
-        max-width: 95%; 
-        max-height: none; 
+        max-width: 95%;
+        max-height: none;
     }
 }
+
 /* heights and widths for larger and medkium screens*/
 @media screen and (min-width: 1024px) {
     .video {
-        height: 1000px; 
+        height: 1000px;
     }
-    
+
     #myVideo iframe {
-        max-width: 900px; 
+        max-width: 900px;
         max-height: 1000px;
     }
 }
 
-/* contact Form
-
-#formElements{
-    display:grid;
-}*/
-
-/* General styles */
-/* Contact Section */
+/* contact Form*/
 section#contact {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Use space-between to create space between contact info and form */
-    padding: 50px; /* Increase padding for larger space inside the section */
-    background: url('C:\Users\jimen\Documents\GitHub\about-me-TheUnit55\img\space.png') center no-repeat;
+    justify-content: space-between;
+    padding: 50px;
+    background: url('/img/space.png') center no-repeat;
     background-size: cover;
-    color: #fff; /* Make all text inside the section white */
-  }
-  
-  /* Contact Information */
-  .contact-info {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff;
+}
+
+/* Contact Information */
+.contact-info {
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    margin-right: 20px; /* Add some margin between the info and the form */
-  }
-  
-  .contact-info div {
+    margin-right: 20px;
+}
+
+/*contact space*/
+.contact-info div {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Increase spacing between contact details */
-  }
-  
-  .contact-info div i {
-    margin-right: 10px; /* Space out icons from text */
-  }
-  
-  /* Contact Form */
-  #contactForm {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    margin-bottom: 20px;
+}
+
+/*icon space*/
+.contact-info div i {
+    margin-right: 10px;
+}
+
+/* Contact Form */
+#contactForm {
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-width: 400px; /* Set a max-width to keep form from stretching too wide */
-  }
-  
-  #contactForm fieldset {
-    border: none; /* Remove border from fieldsets */
-    padding: 0; /* Remove padding from fieldsets */
-  }
-  
-  #contactForm legend {
-    color: #fff; /* White text for legends */
-    margin-bottom: 20px; /* Add space below the legend */
-  }
-  
-  #contactForm label {
-    display: block; /* Make labels block to take full width */
-  }
-  
-  #contactForm input[type="text"],
-  #contactForm input[type="email"],
-  #contactForm input[type="tel"],
-  #contactForm textarea,
-  #contactForm button {
-    width: 100%; /* Full width elements */
+    max-width: 400px;
+}
+
+#contactForm fieldset {
+    border: none;
+    padding: 0;
+}
+
+#contactForm legend {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Make labels block to take full width */
+#contactForm label {
+    display: block;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea,
+#contactForm button {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px; /* Add space between form items */
-    border: 1px solid #fff; /* White border for input */
+    margin-bottom: 10px;
+    border: 1px solid #fff;
     border-radius: 5px;
-    background-color: transparent; /* Transparent background */
-    color: #fff; /* White text color */
-  }
-  
-  #contactForm button {
+    background-color: transparent;
+    color: #fff;
+}
+
+#contactForm button {
     background-color: #008CBA;
     border: none;
-  }
-  
-  #contactForm button:hover {
+}
+
+#contactForm button:hover {
     background-color: #005f73;
-  }
-  
-  /* Ensure the layout stacks on smaller screens */
-  @media (max-width: 900px) {
+}
+
+/* layout works on smaller screens */
+@media (max-width: 900px) {
     section#contact {
-      flex-direction: column;
-      align-items: stretch;
+        flex-direction: column;
+        align-items: stretch;
     }
-  
-    .contact-info, #contactForm {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px; /* Add space between stacked elements */
+
+    .contact-info,
+    #contactForm {
+        width: 100%;
+        margin-bottom: 20px;
     }
-  }
-  
+}
