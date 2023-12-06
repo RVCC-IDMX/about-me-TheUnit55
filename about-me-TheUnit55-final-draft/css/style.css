@@ -408,3 +408,36 @@ section#contact {
         margin-bottom: 20px;
     }
 }
+/*updated footer with imgs*/
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px; 
+    height: auto;
+}
+
+.footer-text {
+    font-size: 1rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
