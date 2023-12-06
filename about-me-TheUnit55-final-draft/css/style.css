@@ -53,317 +53,356 @@ footer {
 
 /* Hobbies Section */
 #hobbies {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 60%;
 }
 
-.hobbies-list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.hobbies-list li {
-    margin-bottom: 10px;
-    font-size: 18px;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    text-shadow: 1px 1px 2px rgba(255, 132, 1, 0.3);
-}
-
-.hobbies-list li a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.hobbies-list li a:hover {
-    background-color: #3498db;
+/* Hobbies Title */
+#hobbies>h2 {
     color: white;
-    text-shadow: 1px 1px 2px rgb(255, 0, 0);
-}
-
-
-.hobbies-list li:nth-child(even) a:hover {
-    background-color: aquamarine;
-    color: #333;
-}
-
-
-/* Gallery Section */
-#gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    border: 2px solid;
+    background-color: #ff6f00;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-}
-
-#gallery img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-/* Hover effect to scale image */
-#gallery img:hover {
-    transform: scale(1.1);
-}
-
-#gallery figure {
     text-align: center;
-    margin: 0;
+    width: fit-content;
 }
 
-#gallery figcaption {
-    padding: 20px;
-}
-
-/* Literature Section */
-#lit {
-    border: 2px solid black;
-    margin-bottom: 2rem;
-    color: red;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-}
-
-#lit div {
-    padding: 2rem;
-    max-width: 40rem;
-    margin: 0 auto;
-}
-
-#lit div p {
-    padding: 0.3rem 0;
-    clear: both;
-}
-
-#lit div p:first-child:first-letter {
-    font-size: 2rem;
-    color: red;
-    float: left;
-    margin-right: 6px;
-    font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    border: 2px solid red;
-    padding: 4px;
-    line-height: 1;
+/* Hobbies List Container */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
-/* Responsive design for tablet size */
-@media screen and (min-width: 60em) {
-    figure {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+/* Hobbies List Items */
+.hobbies-list li {
+    background-color: white;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff6f00;
+    transition: transform 0.3s ease;
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+
+    /* Hobbies Links */
+    .hobbies-list li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+        font-family: 'Arial', sans-serif;
     }
 
-    figcaption {
+    .hobbies-list li a:hover {
+        background-color: #ff6f00;
+        color: white;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    }
+
+    /* On Hover lift the card */
+    .hobbies-list li:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+        #hobbies {
+            width: 80%;
+        }
+
+        .hobbies-list {
+            grid-template-columns: 1fr;
+        }
+
+        .hobbies-list li {
+            width: 100%;
+        }
+    }
+
+
+    /* Gallery Section */
+    #gallery {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        margin-left: 1rem;
+        gap: 20px;
+        padding: 20px;
+        border: 2px solid;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     }
 
-    figure img {
-        width: 100%;
+    #gallery img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    /* Hover effect to scale image */
+    #gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    #gallery figure {
+        text-align: center;
+        margin: 0;
+    }
+
+    #gallery figcaption {
+        padding: 20px;
+    }
+
+    /* Literature Section */
+    #lit {
+        border: 2px solid black;
+        margin-bottom: 2rem;
+        color: red;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     }
 
     #lit div {
-        max-width: 100%;
-        columns: 20rem;
-    }
-}
-
-/* Responsive design for large screen size */
-@media screen and (min-width: 100em) {
-    #gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem;
+        max-width: 40rem;
+        margin: 0 auto;
     }
 
-    hr {
-        display: none;
+    #lit div p {
+        padding: 0.3rem 0;
+        clear: both;
     }
 
-    #gallery h2 {
-        grid-column: 1/-1;
+    #lit div p:first-child:first-letter {
+        font-size: 2rem;
+        color: red;
+        float: left;
+        margin-right: 6px;
+        font-family: "Grenze Gotisch", Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        border: 2px solid red;
+        padding: 4px;
+        line-height: 1;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     }
 
-    figure {
-        display: block;
-    }
-}
+    /* Responsive design for tablet size */
+    @media screen and (min-width: 60em) {
+        figure {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
 
-/* Embedding Styles for Videos 
+        figcaption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        figure img {
+            width: 100%;
+        }
+
+        #lit div {
+            max-width: 100%;
+            columns: 20rem;
+        }
+    }
+
+    /* Responsive design for large screen size */
+    @media screen and (min-width: 100em) {
+        #gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        hr {
+            display: none;
+        }
+
+        #gallery h2 {
+            grid-column: 1/-1;
+        }
+
+        figure {
+            display: block;
+        }
+    }
+
+    /* Embedding Styles for Videos 
 Alignment implementations*/
-.video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    text-align: center;
-    padding-bottom: 20px;
-}
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
 
-.video h2 {
-    padding-bottom: 10px;
-    text-align: center;
-}
+    .video h2 {
+        padding-bottom: 10px;
+        text-align: center;
+    }
 
 
-/* Adjusts the width considering the padding 
+    /* Adjusts the width considering the padding 
  Ensures the container spans the full height of .video */
- #myVideo {
-    position: relative;
-    width: 100%;
-    padding-bottom: 45%; 
-    height: 0;
-    margin-bottom: 50px; 
-}
-
-#myVideo iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); 
-    width: 100%;
-    height: 100%;
-}
-
-/* Additional Responsive Styles */
-@media only screen and (max-width: 375px) {
-    .video {
-        height: auto;
-    }
-
-    #myVideo iframe {
-        max-width: 95%;
-        height: 200%; 
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #myVideo iframe {
-        max-width: 95%;
-        height: 113%; 
-    }
-}
-
-/* heights and widths for larger and medium screens */
-@media screen and (min-width: 1024px) {
-    .video {
-        height: 1000px;
-    }
-
-    #myVideo iframe {
-        max-width: 900px;
-        max-height: 700px; 
-    }
-}
-
-
-/* contact Form*/
-section#contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    background: url('/img/space.png') center no-repeat;
-    background-size: cover;
-    color: #fff;
-}
-
-/* Contact Information */
-.contact-info {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-/*contact space*/
-.contact-info div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/*icon space*/
-.contact-info div i {
-    margin-right: 10px;
-}
-
-/* Contact Form */
-#contactForm {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-}
-
-#contactForm fieldset {
-    border: none;
-    padding: 0;
-}
-
-#contactForm legend {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-/* Make labels block to take full width */
-#contactForm label {
-    display: block;
-}
-
-#contactForm input[type="text"],
-#contactForm input[type="email"],
-#contactForm input[type="tel"],
-#contactForm textarea,
-#contactForm button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-}
-
-#contactForm button {
-    background-color: #008CBA;
-    border: none;
-}
-
-#contactForm button:hover {
-    background-color: #005f73;
-}
-
-/* layout works on smaller screens */
-@media (max-width: 900px) {
-    section#contact {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contact-info,
-    #contactForm {
+    #myVideo {
+        position: relative;
         width: 100%;
+        padding-bottom: 45%;
+        height: 0;
+        margin-bottom: 50px;
+    }
+
+    #myVideo iframe {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Additional Responsive Styles */
+    @media only screen and (max-width: 375px) {
+        .video {
+            height: auto;
+        }
+
+        #myVideo iframe {
+            max-width: 95%;
+            height: 200%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        #myVideo iframe {
+            max-width: 95%;
+            height: 113%;
+        }
+    }
+
+    /* heights and widths for larger and medium screens */
+    @media screen and (min-width: 1024px) {
+        .video {
+            height: 1000px;
+        }
+
+        #myVideo iframe {
+            max-width: 900px;
+            max-height: 700px;
+        }
+    }
+
+
+    /* contact Form*/
+    section#contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        background: url('/img/space.png') center no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+
+    /* Contact Information */
+    .contact-info {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    /*contact space*/
+    .contact-info div {
+        display: flex;
+        align-items: center;
         margin-bottom: 20px;
     }
-}
+
+    /*icon space*/
+    .contact-info div i {
+        margin-right: 10px;
+    }
+
+    /* Contact Form */
+    #contactForm {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #contactForm fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    #contactForm legend {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    /* Make labels block to take full width */
+    #contactForm label {
+        display: block;
+    }
+
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm input[type="tel"],
+    #contactForm textarea,
+    #contactForm button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #fff;
+    }
+
+    #contactForm button {
+        background-color: #008CBA;
+        border: none;
+    }
+
+    #contactForm button:hover {
+        background-color: #005f73;
+    }
+
+    /* layout works on smaller screens */
+    @media (max-width: 900px) {
+        section#contact {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .contact-info,
+        #contactForm {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
