@@ -44,12 +44,83 @@ footer {
     /* Fixed width for larger screens */
 }
 
-/* Bio Section */
+/* Bio Section 
+/* Bio Section Enhancements */
 #bio {
-    text-align: center;
-    color: red;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: #ffffff;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+
 }
+
+#bio .bio-image {
+    flex-basis: 40%;
+
+    max-width: 40%;
+
+    padding-right: 20px;
+
+}
+
+#bio .bio-image img {
+    width: 100%;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+#bio .bio-content {
+    flex-basis: 60%;
+
+    max-width: 60%;
+
+}
+
+#bio .bio-content h2 {
+    font-size: 3rem;
+
+    margin-bottom: 1rem;
+
+}
+
+#bio .bio-content p {
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    line-height: 1.5;
+
+}
+
+#bio .bio-content a {
+    font-size: 1.2rem;
+
+    color: #0066cc;
+
+    text-decoration: underline;
+
+    transition: color 0.3s;
+
+}
+
+#bio .bio-content a:hover {
+    color: #ff6600;
+
+    text-decoration: none;
+
+}
+
+
 
 /* Hobbies Section */
 #hobbies {
@@ -133,8 +204,6 @@ footer {
         width: 100%;
     }
 }
-
-
 
 /* Gallery Section */
 #gallery {
@@ -408,6 +477,7 @@ section#contact {
         margin-bottom: 20px;
     }
 }
+
 /*updated footer with imgs*/
 footer {
     background-color: #333;
@@ -437,7 +507,7 @@ footer {
 }
 
 .social-links img {
-    width: 24px; 
+    width: 24px;
     height: auto;
 }
 
