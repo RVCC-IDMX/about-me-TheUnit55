@@ -41,47 +41,126 @@ footer {
 /* Hero Section */
 #hero img {
     width: 300px;
-    /* Fixed width for larger screens */
 }
 
-/* Bio Section */
+/* Bio Section Enhancements */
 #bio {
-    text-align: center;
-    color: red;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#bio .bio-image {
+    flex-basis: 40%;
+    max-width: 40%;
+    padding-right: 20px;
+}
+
+#bio .bio-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#bio .bio-content {
+    flex-basis: 60%;
+    max-width: 60%;
+}
+
+#bio .bio-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#bio .bio-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+#bio .bio-content a {
+    font-size: 1.2rem;
+    color: #0066cc;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+#bio .bio-content a:hover {
+    color: #ff6600;
+    text-decoration: none;
 }
 
 /* Hobbies Section */
 #hobbies {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 60%;
 }
 
-.hobby-list {
-    list-style: none;
-    padding: 0;
-}
-
-.hobby-list li {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    text-shadow: 1px 1px 2px rgba(255, 132, 1, 0.3);
-    display: flex;
-    align-items: center;
-}
-
-.hobby-list li:nth-child(even) {
-    color: aquamarine;
-    background-color: #3498db;
+#hobbies > h2 {
     color: white;
-    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+    background-color: #ff6f00;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+    width: fit-content;
+}
+
+/* Hobbies List Container */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hobbies List Items */
+.hobbies-list li {
+    background-color: white;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff6f00;
+    transition: transform 0.3s ease;
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+}
+
+/* Hobbies Links */
+.hobbies-list li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.hobbies-list li a:hover {
+    background-color: #ff6f00;
+    color: white;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+/* On Hover, lift the card */
+.hobbies-list li:hover {
+    transform: translateY(-5px);
 }
 
 /* Gallery Section */
@@ -118,7 +197,8 @@ footer {
     padding: 20px;
 }
 
-/* Literature Section */
+/* Literature Section 
+Added some styles to make the literature pop out*/
 #lit {
     border: 2px solid black;
     margin-bottom: 2rem;
@@ -213,22 +293,21 @@ Alignment implementations*/
     text-align: center;
 }
 
-
 /* Adjusts the width considering the padding 
  Ensures the container spans the full height of .video */
- #myVideo {
+#myVideo {
     position: relative;
     width: 100%;
-    padding-bottom: 45%; 
+    padding-bottom: 45%;
     height: 0;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
 }
 
 #myVideo iframe {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
 }
@@ -241,14 +320,41 @@ Alignment implementations*/
 
     #myVideo iframe {
         max-width: 95%;
-        height: 200%; 
+        height: 200%;
     }
 }
 
 @media only screen and (max-width: 768px) {
     #myVideo iframe {
         max-width: 95%;
-        height: 113%; 
+        height: 113%;
+    }
+
+    #bio,
+    #hobbies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bio .bio-image,
+    #bio .bio-content,
+    .hobbies-list li {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    #bio .bio-content h2 {
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+
+    .hobbies-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies-list li {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -260,12 +366,11 @@ Alignment implementations*/
 
     #myVideo iframe {
         max-width: 900px;
-        max-height: 700px; 
+        max-height: 700px;
     }
 }
 
-
-/* contact Form*/
+/* contact Form */
 section#contact {
     display: flex;
     align-items: center;
@@ -356,3 +461,137 @@ section#contact {
         margin-bottom: 20px;
     }
 }
+
+/*updated footer with imgs*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+/* Hamburger menu CSS */
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hamburger-inner {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transition: background-color 0.1s ease-in-out;
+  }
+  
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .hamburger-inner::before {
+    top: -10px;
+  }
+  
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      position: relative;
+      padding-right: 50px;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 10px; 
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+  
+    .navbar-links {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      background-color: #333; 
+      z-index: 1;
+    }
+  
+    .navbar-links ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+  
+    .navbar-links ul li a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+  
+    .navbar-links ul li a:hover,
+    .navbar-links ul li a:focus {
+      background-color: #555;
+    }
+  
+    .navbar-links.active {
+      display: block;
+    }
+  }
+  

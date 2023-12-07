@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
+  <link rel="icon" type="image/x-icon" href="/img/img-final/IMG-Final/Screenshot 2023-12-06 121314.png">
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +19,15 @@
   <!-- This is where the comment is-->
 
   <header>
-
+<!--The navbar with the clickable to direct to the sections and The hamburger menu-->
     <nav class="navbar">
+        <button class="hamburger" aria-label="Open menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       <div class="logo">
-        <img src="/img/bob-web development.svg" alt="Blue Bird">
+        <img src="/img/img-final/IMG-Final/Screenshot 2023-12-06 121314.png" alt="Jdj LOGO">
         <h1>About Me</h1>
       </div>
       <div class="navbar-links">
@@ -52,31 +58,39 @@
     </section>
 
     <section id="bio">
-      <!-- My bio-->
-      <h2>Biography:</h2>
-
-      <div>
-        <p> I want to be...</p>
-        <p> At the Gym, Feeling beast!!!</p>
-
-        <p><a href="https://youtu.be/hlos8imBu7E?si=ihacIP9nOE8xMCI_.com">My Music</a></p>
-
+      <!-- my bio -->
+      <div class="bio-image">
+          <img src="/img/img-final/IMG-Final/Screenshot_20231206_123315_Instagram.jpg" alt="Descriptive Alt Text">
       </div>
-
-    </section>
-
+  
+      
+      <div class="bio-content">
+          <h2>Biography:</h2>
+          <p>
+            Im Juan Jimenez, Currently learning Web Development at Raritan Valley looking to finish my associates for System Information and Technology
+            and then transfering to a 4 year school to finish my degree and really step in the direction I want to and become a software developer. Im currently expirenced in Java, Python, Html & css, Cmdp and powershell.
+            In the near future Im going to really improve my skills in Java and start building a foundation in JavaScript and most excited to dive into Audrino to build techonlogy like robots.
+             <!--I want to be...
+              <br>
+              At the Gym, Feeling beast!!!-->
+          </p>
+          <a href="https://youtu.be/ARYM9ebZ6r8?si=V6iZ0_KjDMkDTnZK" target="_blank">Fred Again-Better With time</a>
+      </div>
+  </section>
+  
+  <!--My Hobbies list section as long with a link to seperate pages displaying my hobbies with a img and a summary-->
     <section id="hobbies">
 
       <h2>Hobbies:</h2>
 
-      <ul class="hobby-list">
-        <li>Going to the Gym</li>
-        <li>Studying</li>
-        <li>Coding</li>
-        <li>Music</li>
-        <li>Chilling</li>
-        <li>History(Major wars/Empires)</li>
-        <li>Watching movies</li>
+      <ul class="hobbies-list">
+        <li><a href="hobby1.html">Going to the Gym</a></li>
+        <li><a href="hobby2.html">Studying</a></li>
+        <li><a href="hobby3.html">Coding</a></li>
+        <li><a href="hobby4.html">Music</a></li>
+        <li><a href="hobby5.html">Chilling</a></li>
+        <li><a href="hobby6.html">History (Major wars/Empires)</a></li>
+        <li><a href="hobby7.html">Watching Movies</a></li>
       </ul>
 
     </section>
@@ -213,17 +227,17 @@
 
 
     </article>
-
+<!--Iframe of my video I took at a concert-->
     <section id="video">
 
       <h2>Video I took at ZHU</h2>
       <div id="myVideo" class="video">
-        <iframe src="https://www.youtube.com/embed/c6NMEUTJqwc?si=SXhhZTJPS4ki5hlr"
-          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encry
+        <iframe src="https://www.youtube.com/embed/c6NMEUTJqwc?si=SXhhZTJPS4ki5hlr" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encry
    pted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </section>
-
+<!--contact section wiith my information so people can contact me and aswell as my hours of operation-->
     <section id="contact">
       <div class="contact-info">
         <div><i class="your-icon-class">📍</i>Somerville, NJ, 08876</div>
@@ -291,12 +305,40 @@
 
 
   </main>
-
+<!--Footer with My name and clickable imgs to my socials-->
   <footer>
+    <div class="footer-container">
+        <div class="footer-text">
+            &copy; 2023 - Juan Jimenez
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/TheUnit55" target="_blank">
+                <img src="/img/img-final/IMG-Final/github-computer-icons-logo-github.jpg" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/juan_the_unit/" target="_blank">
+                <img src="/img/img-final/IMG-Final/119-1198369_instagram-2016-logo-svg-vector-amp-png-transparent.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCccx-ug8cXm65kHOqaipf4w" target="_blank">
+                <img src="/img/img-final/IMG-Final/Youtube-logo-vector-PNG.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</footer>
+<!--hamburger menu javascript
+Identifies when to show the hamburger menu based on the size of media-->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.querySelector('.hamburger');
+    var navLinks = document.querySelector('.navbar-links');
 
-    &copy; 2023 - Juan Jimenez
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('is-active');
+      navLinks.classList.toggle('active');
+    });
+  });
+</script>
 
-  </footer>
+
 </body>
 
 </html>
