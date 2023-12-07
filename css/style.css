@@ -197,7 +197,8 @@ footer {
     padding: 20px;
 }
 
-/* Literature Section */
+/* Literature Section 
+Added some styles to make the literature pop out*/
 #lit {
     border: 2px solid black;
     margin-bottom: 2rem;
