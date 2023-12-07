@@ -20,8 +20,13 @@
   <header>
 
     <nav class="navbar">
+        <button class="hamburger" aria-label="Open menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       <div class="logo">
-        <img src="/img/img-final/IMG-Final/Screenshot 2023-12-06 121314.png" alt="Blue Bird">
+        <img src="/img/img-final/IMG-Final/Screenshot 2023-12-06 121314.png" alt="Jdj LOGO">
         <h1>About Me</h1>
       </div>
       <div class="navbar-links">
@@ -61,9 +66,12 @@
       <div class="bio-content">
           <h2>Biography:</h2>
           <p>
-              I want to be...
+            Im Juan Jimenez, Currently learning Web Development at Raritan Valley looking to finish my associates for System Information and Technology
+            and then transfering to a 4 year school to finish my degree and really step in the direction I want to and become a software developer. Im currently expirenced in Java, Python, Html & css, Cmdp and powershell.
+            In the near future Im going to really improve my skills in Java and start building a foundation in JavaScript and most excited to dive into Audrino to build techonlogy like robots.
+             <!--I want to be...
               <br>
-              At the Gym, Feeling beast!!!
+              At the Gym, Feeling beast!!!-->
           </p>
           <a href="https://youtu.be/ARYM9ebZ6r8?si=V6iZ0_KjDMkDTnZK" target="_blank">Fred Again-Better With time</a>
       </div>
@@ -314,7 +322,18 @@
         </div>
     </div>
 </footer>
+<!--hamburger menu javascript-->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.querySelector('.hamburger');
+    var navLinks = document.querySelector('.navbar-links');
 
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('is-active');
+      navLinks.classList.toggle('active');
+    });
+  });
+</script>
 
 
 </body>
